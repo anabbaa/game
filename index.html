@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <title>Simple Game</title>
+</head>
+
+<body style="position: relative;">
+
+  <div class="mini" style="position: absolute;"> 😎</div>
+  <div class="final">
+    <div> 😎</div>
+    <div> 😎</div>
+    <div> 😎</div>
+    <div> 😎</div>
+  </div>
+
+  <script>
+    let hstandpoint = 0;
+    let vstandpoint = 0;
+    function goUp() {
+      vstandpoint -= 10;
+      mini.style.top = vstandpoint + "px";
+    }
+    function goDown() {
+      vstandpoint += 10;
+      mini.style.top = vstandpoint + "px";
+    }
+    function goRight() {
+      hstandpoint -= 10;
+      mini.style.left = hstandpoint + "px";
+      console.log(hstandpoint);
+    }
+
+    function goLeft() {
+      hstandpoint += 10;
+      mini.style.left = hstandpoint + "px";
+    }
+
+    function move(e) {
+      
+      if (e.code == "KeyW") goUp();
+      if (e.code == "KeyA") goRight();
+      if (e.code == "KeyD") goLeft();
+      if (e.code == "KeyX") goDown() 
+      console.log(window.innerHeight);
+      console.log(window.innerWidth);
+      if (
+    window.innerHeight / 4 <= vstandpoint &&
+    window.innerWidth - 70 <= hstandpoint
+  )
+    alert("Gongurlations");
+    
+    }
+    
+
+
+
+    const body = document.querySelector("body");
+    const mini = document.querySelector(".mini");
+    body.addEventListener("keypress", move);
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
