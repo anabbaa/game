@@ -1,0 +1,19 @@
+
+.mini {
+    position: absolute;
+    font-size: 2rem;
+    z-index: 1;
+    color: yellow;
+  }
+  .final {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+    top: 50%;
+    right: 5%;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+  }
